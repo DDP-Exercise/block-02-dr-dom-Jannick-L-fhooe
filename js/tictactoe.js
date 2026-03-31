@@ -130,11 +130,11 @@ for(let i = 0; i < BATTLEFIELD.length; i++){
 lineCountDom = 0
 lineCountSavior = 0
 
-for(let i = BATTLEFIELD.length - 1; i >= 0 ; i--){
-    if(BATTLEFIELD[i][i] === O){
+for(let i = 0; i < BATTLEFIELD.length; i++){
+    if(BATTLEFIELD[i][BATTLEFIELD.length-1-i] === O){
         lineCountDom ++
     }
-    if(BATTLEFIELD[i][i] === X){
+    if(BATTLEFIELD[i][BATTLEFIELD.length-1-i] === X){
         lineCountSavior ++
     }
     if(lineCountDom === BATTLEFIELD.length){
@@ -144,3 +144,4 @@ for(let i = BATTLEFIELD.length - 1; i >= 0 ; i--){
         console.log("Hurray the Savior won the anti diagonal!")
     }
 }
+
