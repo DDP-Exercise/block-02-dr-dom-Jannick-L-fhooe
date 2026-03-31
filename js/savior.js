@@ -18,7 +18,7 @@
  *     is watching. We have to do it the right way.
  *     The JavaScript way!
  *
- *     Bratlsoft - 2026-03-15
+ *     Jannick Lohner - 2026-03-25
  *******************************************************/
 
 /**
@@ -27,8 +27,12 @@
  * without the risk of catching an eye infection!
  */
 
+const wrongStyled = document.querySelectorAll('p[style]')
 
-
+for(let element of wrongStyled){
+    element.style.background = "white"
+    element.style.color="black"
+}
 
 /**
  * TODO 2:
@@ -36,8 +40,7 @@
  * Can't we just remove them all together?
  */
 
-
-
+document.querySelector("ul").remove();
 
 /**
  * TODO 3:
@@ -45,15 +48,23 @@
  * And while at it, let the world know again, that they are back in town!
  */
 
+document.getElementById("heroes_of_the_web").style.visibility = "visible"
 
+const hiddenElements= document.querySelectorAll("#heroes_of_the_web > li")
 
+for(let element of hiddenElements){
+    element.style.visibility = "visible";
+}
+
+document.getElementById("message").textContent="We care for simplistic design!"
+document.getElementById("message").textContent="Let us introduce to you our list of Web-Heroes:";
 /**
  * TODO 4:
  * Our Webpage is safe again! But Dr. Dom is still holding our Headline as a hostage!
  * Do your thing, savior!
  */
 
-
+document.querySelector("h1").textContent = "We, the mighty Heroes of the web, will protect you!";
 
 /**
  * TODO 5:
@@ -63,3 +74,5 @@
  * It might sound paranoid. But I can't get rid of the feeling, that he is still here,
  * somewhere in the DOM. I can still feel his Code. Can you identify the source and remove it?
  */
+
+document.querySelector("script[src='js/dr.dom.js']").remove();

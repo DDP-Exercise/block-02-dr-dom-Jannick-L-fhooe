@@ -11,10 +11,26 @@
  *     For my code to show it's full potential, I just
  *     need one object. Can you help me out?
  *
- *     Bratlsoft - 2026-03-15
+ *     Jannick Lohner - 2026-03-20
  *******************************************************/
 
 //TODO: Place one object here.
+const SAVIOR ={
+    name:"Jannick",
+    age: 20,
+    location: "Hagenberg",
+    hobbies: ["TTRPGs", "Gaming", "Programming", "Reading"],
+    type_of_companion: "Pikachu",
+    companion: {
+        name : "Pika",
+        height: "0,4 m",
+        weight: "6,0 kg",
+        gender: "M",
+        type: "Electric",
+        category: "Mouse Pokemon",
+        pokedex_entry_number: "#0025",
+    }
+}
 
 /*******************************************************
  *   DO NOT CHANGE THE CODE BELOW!

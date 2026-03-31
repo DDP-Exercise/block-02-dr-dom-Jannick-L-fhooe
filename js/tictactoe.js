@@ -14,7 +14,7 @@
  *     For that reason, your little program should be written in a way, that it can
  *     scale with the size of the battlefield (3x3, 4x4, ..., nxn).
  *
- *     Bratlsoft - 2026-03-15
+ *     Jannick Lohner - 2026-03-20
  *******************************************************/
 
 const X = "Savior (X)";
@@ -65,6 +65,83 @@ const BATTLEFIELD =
 //TODO: Check if the battle is over, and if so, announce the winner!
 
 // Check Horizontal
+
+for(let line of BATTLEFIELD){
+    let lineCountDom = 0
+    let lineCountSavior = 0
+    for(let cell of line){
+        if(cell === O){
+            lineCountDom ++
+        }
+        if(cell === X){
+            lineCountSavior ++
+        }
+    }
+    if(lineCountDom === BATTLEFIELD.length){
+        console.log("Oh no Dr. Dom won horizontal!")
+    }
+    if(lineCountSavior === BATTLEFIELD.length){
+        console.log("Hurray the Savior won horizontal!")
+    }
+}
+
 // Check Vertical
+
+for(let i = 0; i < BATTLEFIELD.length; i++){
+    let lineCountDom = 0
+    let lineCountSavior = 0
+    for(let j = 0; i < BATTLEFIELD.length; i++){
+        if(BATTLEFIELD[j][i] === O){
+            lineCountDom ++
+        }
+        if(BATTLEFIELD[j][i] === X){
+            lineCountSavior ++
+        }
+    }
+    if(lineCountDom === BATTLEFIELD.length){
+        console.log("Oh no Dr. Dom won vertical!")
+    }
+    if(lineCountSavior === BATTLEFIELD.length){
+        console.log("Hurray the Savior won vertical!")
+    }
+}
+
 // Check Main Diagonal
+
+let lineCountDom = 0
+let lineCountSavior = 0
+
+for(let i = 0; i < BATTLEFIELD.length; i++){
+    if(BATTLEFIELD[i][i] === O){
+        lineCountDom ++
+    }
+    if(BATTLEFIELD[i][i] === X){
+        lineCountSavior ++
+    }
+    if(lineCountDom === BATTLEFIELD.length){
+        console.log("Oh no Dr. Dom won on  the main diagonal!")
+    }
+    if(lineCountSavior === BATTLEFIELD.length){
+        console.log("Hurray the Savior won the main diagonal!")
+    }
+}
+
 // Check Anti Diagonal
+lineCountDom = 0
+lineCountSavior = 0
+
+for(let i = 0; i < BATTLEFIELD.length; i++){
+    if(BATTLEFIELD[i][BATTLEFIELD.length-1-i] === O){
+        lineCountDom ++
+    }
+    if(BATTLEFIELD[i][BATTLEFIELD.length-1-i] === X){
+        lineCountSavior ++
+    }
+    if(lineCountDom === BATTLEFIELD.length){
+        console.log("Oh no Dr. Dom won the anti diagonal!")
+    }
+    if(lineCountSavior === BATTLEFIELD.length){
+        console.log("Hurray the Savior won the anti diagonal!")
+    }
+}
+
